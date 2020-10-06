@@ -1,3 +1,4 @@
+let Node = require('../lib/node');
 // Node.new 
 // node.data
 // node.next_node
