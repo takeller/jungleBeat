@@ -26,12 +26,12 @@ describe('linkedList', () => {
     it('Can count nodes in the list', () => {
         let list = new LinkedList()
         list.append("hello")
-        expect(list.count).toEqual(1)
+        expect(list.count()).toEqual(1)
     });
 
     it('Can generate a string of all the elements in the list, space seperated', () => { 
         let list = new LinkedList()
         list.append("hello")
-        expect(list.toString).toEqual('hello')
+        expect(list.toString()).toEqual('hello')
     });
 });
