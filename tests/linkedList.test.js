@@ -41,4 +41,34 @@ describe('linkedList', () => {
         list.append("world!")
         expect(list.toString()).toEqual('hello world!')
     });
+
+    it('Can prepend a node to the list', () => { 
+        let list = new LinkedList() 
+        list.prepend("world!")
+        expect(list.toString()).toEqual('world!')
+        expect(list.count()).toEqual(1)
+
+        list.prepend('Hello')
+        expect(list.toString()).toEqual('Hello world!')
+        expect(list.count()).toEqual(2)
+    });
+
+    it('Can insert nodes at a given position in the list', () => { 
+        let list = new LinkedList() 
+        list.append('Hello')
+        list.append('world!')
+        list.insert(1, 'to the')
+        expect(list.count()).toEqual(3)
+        expect(list.toString()).toEqual('Hello to the world!')
+
+        list.insert(2, 'beautiful')
+        expect(list.count()).toEqual(4)
+        expect(list.toString()).toEqual('Hello to the beautiful world!')
+    });
+
+    it('Returns an error message if the insert position is not valid', () => { 
+        let list = new LinkedList() 
+        list.append('Hello')
+        expect(list.insert(3, 'world!')).toEqual('Position outside bounds of list')
+    });
 });
