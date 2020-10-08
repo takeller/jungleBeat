@@ -21,6 +21,6 @@ describe('Node', () => {
 
     it('Can access pointer to the next node', () => {
         // expect(node1.next_node).toEqual(Node2)
-        expect(node2.next_node).toEqual(null)
+        expect(node2.nextNode).toEqual(null)
     });
 })
